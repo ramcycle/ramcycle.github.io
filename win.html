@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Crib - Setup Warp</title>
+    <style>
+        body { background-color: #121212; color: #00ff00; font-family: sans-serif; text-align: center; padding-top: 50px; }
+        .btn { display: block; background: #333; color: white; padding: 20px; margin: 10px auto; width: 80%; border-radius: 10px; text-decoration: none; font-weight: bold; border: 2px solid #00ff00; }
+        .btn:active { background: #00ff00; color: black; }
+    </style>
+</head>
+<body>
+    <h1>Mansion Entry: Phase 2</h1>
+    <p>Try these to trigger the App Install page:</p>
+
+    <a href="intent:#Intent;component=com.google.android.gms/.setup.libs.workflow.WaitElementActivity;end" class="btn">
+        Trigger App Selection (WaitElement)
+    </a>
+
+    <a href="intent:#Intent;action=com.google.android.setupwizard.PROGRESS;end" class="btn">
+        Force Setup Progress
+    </a>
+
+    <a href="intent:#Intent;action=android.settings.ADD_ACCOUNT_SETTINGS;end" class="btn">
+        Direct Add Account
+    </a>
+
+    <p style="color: #666; font-size: 12px; margin-top: 30px;">
+        If it asks "Open with...", pick <b>Google Play services</b> or <b>Android Setup</b>.
+    </p>
+</body>
+</html>
